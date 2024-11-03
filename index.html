@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C# Programming Introduction</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-0">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">  </a> 
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#intro"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#getting-started"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#basics"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#resources"></a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid dashboard pt-4">
+        <div class="row">
+            <div class="col-md-2 sidebar">
+                <h2>Dashboard</h2>
+                <ul>
+                    <li>
+                        <a href="#1" id="dashboard-1">Programming logic</a>
+                        <div class="card dashboard-card" id="dashboard-content-1" style="visibility: hidden; height: 0;">
+                            <h3>Programming logic content</h3>
+                            <p>Este é o conteúdo do Dashboard 1!</p>
+                            <img src="./images/image1.jpg" alt="Image 1">
+                            <a href="#" onclick="close()" class="close-button">Close</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#2" id="dashboard-2">Basic Concepts in C#</a>
+                        <div class="card dashboard-card" id="dashboard-content-2" style="visibility: hidden; height: 0;">
+                            <h3>Basic Concepts in C# content</h3>
+                            <p>Basic Concepts in C# content</p>
+                            <a href="#" onclick="close()" class="close-button">Close</a>                        
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#3" id="dashboard-3">Object-oriented programming</a>
+                        <div class="card dashboard-card" id="dashboard-content-3" style="visibility: hidden; height: 0;">
+                            <h3>Object-oriented programming content</h3>
+                            <p>Object-oriented programming content</p>
+                            <a href="#" onclick="close()" class="close-button">Close</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#4" id="dashboard-4">Using ASP.NET</a>
+                        <div class="card dashboard-card" id="dashboard-content-4" style="visibility: hidden; height: 0;">
+                            <h3>Using ASP.NET content</h3>
+                            <p>Using ASP.NET content</p>
+                            <a href="#" onclick="close()" class="close-button">Close</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-10 content">
+                <main>
+                    <section id="intro">
+                        <div class="container">
+                            <h1 class="display-4">Welcome to C# Programming Introduction!</h1>
+                            <p class="lead">C# is a modern, object-oriented programming language that is widely used for building Windows applications, web applications, and mobile apps.</p>
+                        </div>
+                    </section>
+                    <section id="getting-started">
+                        <div class="container">
+                            <h2>Getting Started with C#</h2>
+                            <p>To get started with C#, you'll need to install Visual Studio, a popular integrated development environment (IDE) for C# development.</p>
+                            <ul>
+                                <li>Download and install Visual Studio from the official website.</li>
+                                <li>Create a new C# project in Visual Studio.</li>
+                                <li>Write your first C# program using the `Console.WriteLine` method.</li>
+                                <li><a href="https://visualstudio.microsoft.com/pt-br/vs/">Download Visual Studio</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section id="basics">
+                        <div class="container">
+                            <h2>Basics of C#</h2>
+                            <div class="card">
+                                <h3>Variables</h3>
+                                <p>In C#, a variable is a named storage location that holds a value.</p>
+                                <p><code>int x = 5;</code></p>
+                                <p></p><code>char myChar = 'A';</code></p> 
+                                <p></p><code>float myFloat = 3.14f</code></p>
+                                <p></p><code>public static void (your method or local function); </code></p>
+                                <p></p><code>double myDouble = 3.14159;</code></p>
+                            </div>
+                            <div class="card">
+                                <h3>Data Types</h3>
+                                <p>C# has several built-in data types, including integers, strings, and booleans.</p>
+                                <p><code>string name = "John";</code></p>
+                                <p>To use boolean we need using true or false. Example:</p>
+                                <p><code>int y = 10;</code></p>
+                                <p><code>0 = true ; 1 = false; </code></p>
+                            </div>
+                            <div class="card">
+                                <h3>Control Structures</h3>
+                                <p>Conditional (if/else): executes a block of code if a condition is true</p>
+                                <p>Loops (while, for, foreach): executes a block of code multiple times</p>
+                                <p>Switch: executes a block of code based on a value</p>
+                            </div>
+                            <div class="card">
+                                <h3>Methods</h3>                               
+                                <p>Are blocks of code that can be called multiple times, Can take parameters and return values</p> 
+                                <p>Switch: executes a block of code based on a value:</p>
+                                <p><code> string fullName = typeof(MyObj).FullName;</code></p>
+
+                                <p><code>switch (fullName)</p>
+                                    {
+                                        <p>case "fullName1":</p>
+                                        <p>case "fullName2":</p>
+                                        <p>case "fullName3":</p>
+                                    }</code> </p>          
+                            </div>
+                            <div class="card">
+                                <h3>Classes and Objects</h3>
+                                <p>Classes: are blueprints for creating objects</p>
+                                <p>Objects: are instances of classes</p>
+                                <p>Properties: are characteristics of an object</p>
+                                <p>Methods: are actions an object can perform</p>
+                            </div>
+                        </div>
+                            <!-- Add more cards here -->
+                        </div>
+                    </section>
+                    <section id="resources">
+                        <div class="container">
+                            <h2>Resources</h2>
+                            <ul>
+                                <li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/">Microsoft C# Documentation</a></li>
+                                <li><a href="https://www.pluralsight.com/courses/c-sharp-fundamentals">Pluralsight C# Fundamentals Course</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="overlay" style="display: none;">
+    <div class="overlay-content">
+        <!-- Conteúdo do overlay será inserido aqui pelo JavaScript -->
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
