@@ -1,93 +1,200 @@
-/* Estilo geral da página */
 body {
     font-family: Arial, sans-serif;
-}
-
-/* Estilo da sidebar */
-.sidebar {
-    width: 200px;
-    float: left;
-}
-
-/* Estilo da lista na sidebar */
-.sidebar ul {
-    list-style-type: none;
+    margin: 0;
     padding: 0;
 }
 
-.sidebar li {
-    margin: 10px 0;
-}
-
-/* Estilo dos links na sidebar */
-.sidebar a {
-    text-decoration: none;
-    color: blue;
-}
-
-/* Estilo do overlay */
-#overlay {
-    position: fixed;
+.navbar {
+    background-color: #2b2727;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    position: fixed; /* adicionado para fixar o navbar no topo */
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000; /* Certifique-se de que o overlay fique acima de outros elementos */
+    width: 100%; /* ajuste o valor de acordo com a largura desejada */
+    z-index: 1; /* adicionado para garantir que o navbar fique acima do dashboard */
 }
 
-/* Estilo do conteúdo do overlay */
-.overlay-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 600px;
-    width: 100%;
-}
-
-/* Estilo do card no overlay */
-.card {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 15px;
-    margin: 10px 0;
-}
-
-/* Estilo do título do card */
-.card-title {
+.navbar-brand {
     font-size: 1.5em;
+}
+
+.navbar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-nav li {
+    margin-right: 20px;
+}
+
+.navbar-nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar-nav a:hover {
+    color: #ccc;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.display-4 {
+    font-size: 2.5em;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
-/* Estilo do texto do card */
-.card-text {
+.lead {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: rgb(201, 204, 204);
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.code {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-family: monospace;
+}
+
+.code code {
+    font-size: 1.2em;
+}
+
+.resources ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.resources li {
     margin-bottom: 10px;
 }
 
-/* Estilo dos botões */
-.btn {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+.resources a {
+    text-decoration: none;
+    color: hsl(200, 60%, 99%);
 }
 
-/* Estilo do botão secundário */
-.btn-secondary {
-    background-color: #007bff;
-    color: white;
+.resources a:hover {
+    color: #23527c;
 }
 
-.btn-secondary:hover {
-    background-color: #0056b3;
+/* ajustes para o dashboard */
+.dashboard {
+    padding-top: 56px; /* ajuste o valor de acordo com a altura do navbar */
 }
 
-/* Estilo para o botão de fechar */
-.close-button {
+.sidebar {
+    position: fixed;
+    top: 50px; /* ajuste o valor de acordo com a altura do navbar */
+    left: 0;
+    width: 160px; /* ajuste o valor de acordo com a largura desejada */
+    height: calc(100vh - 56px); /* ajuste o valor de acordo com a altura do navbar */
+    background-color: #5ba3f1;
+    padding: 25px;
+    border-right: 1px solid #ddd;
+    z-index: 1; /* make sure it's below the overlay */
+}
+
+.sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 2em; /* adiciona um espaçamento de 2em entre as linhas */
+}
+
+.sidebar li {
+    margin-bottom: 20px; /* adiciona um espaçamento de 10px entre as linhas */
+    color: #fff; /* altera a cor da letra para branco */
+}
+
+.sidebar a {
+    color: #151414; /* altera a cor da letra para branco */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.content {
+    margin-left: 200px; /* ajuste o valor de acordo com a largura do sidebar */
+    padding: 20px;
+    z-index: 0; /* make sure it's below the overlay and sidebar */
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 2; /* make sure it's on top of the navbar and sidebar */
+}
+
+#overlay.show {
+  display: block;
+}
+
+.dashboard-content {
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.show {
+    #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        z-index: 2; /* make sure it's on top of the navbar and sidebar */
+      }
+      
+      #overlay.show {
+        display: block;
+      };
+  }
+  .card-body {
+    overflow-y: auto;
+    max-height: 88vh; /* adjust the max-height to a percentage of the viewport height */
+    padding: 20px; /* add some padding to make the content more readable */
+  }
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+ 
+  .close-button {
     position: absolute;
-    top: 10px;
-    right: 10px;
-}
+    top: 0px;
+    right: 0px;
+  }
