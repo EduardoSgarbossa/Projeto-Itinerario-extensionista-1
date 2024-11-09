@@ -53,6 +53,44 @@ const sections = [
         `,
         detalhes: "Aprenda os fundamentos da POO em C# e como aplicá-los em seus projetos.",
     },
+    {
+
+        id: 4,
+
+        title: "ASP.NET Core",
+
+        content: `
+
+            <p>ASP.NET Core é um framework open-source para a construção de aplicações web modernas, que podem ser executadas em múltiplas plataformas.</p>
+
+            <p>Ele é projetado para ser leve, modular e de alto desempenho, permitindo a criação de APIs RESTful e aplicações web dinâmicas.</p>
+
+            <pre><code>using Microsoft.AspNetCore.Mvc;
+
+
+[ApiController]
+
+[Route("[controller]")]
+
+public class HelloWorldController : ControllerBase
+
+{
+
+    [HttpGet]
+
+    public ActionResult<string> Get() => "Hello, World!";
+
+}</code></pre>
+
+            <p>Exemplo de um controlador simples em ASP.NET Core que retorna uma string.</p>
+
+            <img src="./images/image4.jpg" alt="Imagem 4">
+
+        `,
+
+        detalhes: "Descubra como criar aplicações web e APIs utilizando ASP.NET Core.",
+
+    },
 ];
 
 // Componente principal do App
