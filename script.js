@@ -29,6 +29,30 @@ const sections = [
         `,
         detalhes: "Aprenda os conceitos básicos de C# com exemplos práticos.",
     },
+    {
+        id: 3,
+        title: "Programação Orientada a Objetos",
+        content: `
+            <p>A Programação Orientada a Objetos (POO) é um paradigma de programação que utiliza objetos e classes.</p>
+            <p>Em C#, a POO é implementada através de classes e objetos, permitindo a criação de modelos que representam entidades do mundo real.</p>
+            <pre><code>class Carro { 
+    public string Marca { get; set; }
+    public string Modelo { get; set; }
+
+    public Carro(string marca, string modelo) {
+        Marca = marca;
+        Modelo = modelo;
+    }
+
+    public void ExibirInfo() {
+        Console.WriteLine($"Marca: {Marca}, Modelo: {Modelo}");
+    }
+}</code></pre>
+            <p>Exemplo de uma classe Carro em C# com propriedades e um método para exibir informações.</p>
+            <img src="./images/image3.jpg" alt="Imagem 3">
+        `,
+        detalhes: "Aprenda os fundamentos da POO em C# e como aplicá-los em seus projetos.",
+    },
 ];
 
 // Componente principal do App
@@ -45,13 +69,13 @@ const App = () => {
         } else {
             console.error('Seção não encontrada');
         }
-    };
+    }
 
     // Função para fechar o overlay
     const closeOverlay = () => {
         setOverlayVisible(false); // Oculta o overlay
         setSelectedSection(null); // Limpa a seção selecionada
-    };
+    }
 
     return (
         <div>
@@ -82,12 +106,7 @@ const App = () => {
                 </div>
             )}
         </div>
-    );
-};
-{isOverlayVisible && selectedSection && (
-    <div id="overlay" className={isOverlayVisible ? 'show' : ''}>
-        ...
-    </div>
-)}
+    )
+}
 
 export default App;
